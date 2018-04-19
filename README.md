@@ -30,3 +30,74 @@ TO DO: <br></br>
 Taches To DO<br></br>
 Richmond: fiche partenaire<br></br>
 Elias: suivi du pesage et du mandat delegué<br></br>
+
+Entretien KASSI SCOOP 22112017
+
+* Charge
+- Gestion et suivi prefinancement des planteurs (pret planteurs)
+	Suivi des operations
+	Analyse du compte planteurs
+	Edition des documents de caisse
+	Paiement des prets
+	Remboursement des prets
+
+- Gestion des pisteurs
+	Chaque pisteur est rattaché à une zone
+	chaque planteur de la zone est rattaché à un pisteur
+	(chaque planteur est aussi rattaché à une zone)
+	il doit etre possible de faire des reaffectations de pisteurs (pouvoir suivre l'historique des affectations d'un pisteur??)
+	
+* Gestion des commissions chez les cooperants, les pisteurs et les cooperatives
+- Pisteurs
+	suivi de l'historique des prix de matieres premieres
+	un fond est remis au pisteur pour l'achat de ses matieres premiere (a credit?)
+	une commission est convenue entre la cooperative et les pisteurs (cette commission peut etre une commission variable et definir au poids)
+	un fond peut etre remis au pisteur pour aller acheter les matieres premieres chez les planteurs
+	un pisteur peut utiliser ses fonds propres pour acheter les matieres premieres chez les paysans
+	au retour du pisteur un solde de son compte est effectué et ses commissions lui sont payé
+		
+** Document a fourni au conseil cafe cacao et a remplir en ligne (cas des cooperatives cacao)
+	
+	Commission des cooperants, cooperateurs et planteurs
+		le prix des commission est decidé par AG
+		il peut avoir des commissions ou pas
+		les commissions sont calculées sur le volume des ressources envoyées (ressources ou production collecté au Kg)
+		les commissions peuvent etre versées à tout moment mais de maniere generale cela se fait apres chaque campagne
+		il est necessaire de pouvoir suivre en valeur et en quantité les volumes versés par les planteurs, leur situation et les commissions versées
+		il faut pouvoir affecter chaque operation du systeme à une campagne grande, officiel ou des campagnes intermediaires
+	Commission cooperative
+		definition: difference entre le prix export et le prix bord champs (prix chez les planteurs)
+		il represente le chiffre d'affaires des cooperatives et il est utilisé pour:
+			le paiement des commissions
+			les frais generaux
+			les autres charges
+			le solde est reversé au planteur (voir commission planteur)
+		le client final (usinier ou exportateur) peut rembourser un fond (11 f/kg par exemple) qui sera reversé à la cooperative
+		en fonction de ce qu'elle lui a envoyé. Les prix de ces remboursement sont defini par le conseil cafe cacao en fonction d'un
+		bareme de distance. Ce mantant n'est pas toujours versée.
+
+* Stock
+- Magasin general (possibilité de multi entrepots)
+	Matieres premieres
+	Emballages sacs
+	pouvoir suivre sortie de stocks de sacs chez les pisteurs et les planteurs
+	pouvoir suivre retour de stocks de sacs chez les pisteurs et les planteurs
+	en absence d'identification des sacs proposer un etiquetage code barre ou alphanumerique
+- Entrees en stocks
+	pisteurs ramene de la production emballé dans les sacs
+	planteurs ramene de la production emballé dans les sacs
+- Sorties de stocks
+	Livraison chez le client export ou local
+	Deplacement dans un autre entrepot
+	
+* Transport
+- Identification des voyages
+	tonnage, 
+	transport, 
+	date, 
+	identification chauffeur, 
+	identification vehicule, 
+	identification prestataire
+- Document de connestement demandé et livré par le client pour chaque voyages
+Gestion de la caisse
+Gestion des fournisseurs
