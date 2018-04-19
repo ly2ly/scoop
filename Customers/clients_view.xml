@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="hr_clients_tree_view">
+            <field name="name">hr.clients.tree</field>
+            <field name="model">hr.clients</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Les Clients">
+                    <field name='partner_id'/>
+                    <field name='periode'/>
+                   
+                    
+                    
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_clients_form" model="ir.ui.view">
+            <field name="name">hr.clients.form</field>
+            <field name="model">hr.clients</field>
+            <field name="arch" type="xml">
+                <form string="Les Clients">
+                    <header>
+
+                        <button name="abs_validate" string="Valider"
+                                attrs="{'invisible':['|', ('state', '=', 'ended'),('state', '=', 'waiting')]}"
+                                class="oe_highlight" groups="base.group_user"/>
+                        <button name="abs_ended" string="Terminer"
+                                attrs="{'invisible':['|', ('state', '=', 'draft'),('state', '=', 'ended')]}"
+                                class="oe_highlight"/>
+                        <field name="state"
+                               widget="statusbar"
+                               statusbar_visible="draft,waiting,ended"
+                               statusbar_colors='{"draft":"blue",
+                                                       "waiting":"green",
+                                                       "ended":"orange"}'/>
+                    </header>
+                    <sheet>
+                        <group col='4'>
+                            <field name='partner_id'/>
+                          
+                            <!--field name='departement'/-->
+
+                        </group>
+                        <group col='4'>
+                            <field name='date_du'/>
+                            <field name='date_au'/>
+                          
+                            <!--field name='departement'/-->
+
+                        </group>
+                       
+                        <notebook>
+                            <page string='Lignes des vents'>
+                                <field name='comiss_ids'>
+                                    <tree editable="bottom">
+                                        <field name='periode' />
+                                        <field name='nombre_sac'/>
+                                        <field name='poid' sum='poid'/>
+                                        <field name='prix_uni'/>
+                                        <field name='taux_com'/>
+                                        <field name='montant' sum='montant'/>
+                                        <field name='Commission' sum='Commission'/>
+                                        <field name='total' sum='total'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        
+                    </sheet>
+
+                </form>
+
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_hr_clients_tree_view">
+            <field name="name">Les Ventes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.clients</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="hr_clients_tree_view"/>
+        </record>
+
+
+ <menuitem 
+              name="Clients" 
+              id="menu_hr_clients" 
+              parent="ap_scoop_partner.menu_scoop_partner" 
+              sequence="20" 
+        action="action_hr_clients_tree_view"
+              />
+        
+
+    </data>
+</openerp>

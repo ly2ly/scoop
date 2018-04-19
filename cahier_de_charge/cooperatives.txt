@@ -1,0 +1,79 @@
+Cooperative:
+- Suivi des delegués (pisteurs)
+	Suivi du compte du pisteur (remise de fonds + emballages)
+	modele de fichier de suivi des remises du pisteurs (OK)
+
+- Suivi des planteurs 
+	certifié et non certifié
+	modele de fichier de suivi du planteur (identification)
+	suivi des pret planteurs (suivi financiere et qualitatif
+	alerte pour le recouvrement)
+		Type de pret: avance, phyto, engrais
+		copie du registre?
+			date
+			nom et prenom
+			Section
+			Nobre de sac dans le cas d'engrais
+			Prix unitaire sac
+			montant total
+			versement
+			duree l'emprunt (6 mois de maniere generale mais peut varier)
+			
+
+- suivi du pesage
+	pesage des pisteurs
+	pesage des planteurs
+	Alerte à l'atteinte du poids pour le chargement
+	planification des chargements (poids necessaire pour le chargement)
+
+- user
+	caissiere
+		reglement fournisseur (process bon de commande)
+		modele de fichier Excel
+	Administrateur groupe
+		gere les producteurs relais
+		gere uniquement les planteurs certifiés (voir base de données suivi des planteurs)
+
+
+----------------
+
+Module de gestion des cooperatives agricoles CI
+
+Je fais un briefing rapide:
+L'objective est de creer un module de gestion des cooperatives agricoles alors l'idee comme l'a dit est d'integrer et d'adapter 
+a Odoo. Les taches à faire:
+
+
+ajouter les bolean isplanteur et isdelegue dans la fiche partenaire
+
+dans le cas du planteur integrer la fichier xls Base de données qui est la base des planteurs
+
+creer une table + vue mandat avec les champs date, delegué, fonds, nbre emballages, emballage, unité de mesure emballages
+explication: dans les cooperatives, de l'argent est remis à une categorie de commercial (les delegués) qui vont acheter 
+des produits directement aux planteurs et il leur est preté des emballages pour le transport. 
+Ces fonds sont suivi comptablement avec un compte financier de type tiers. Alors l'operation de remise de fonds doit permettre d'augmenter le debit du compte lié au partenaire.
+Sur la fiche partenaire, avec un bouton intelligent, on doit pouvoir savoir le niveau du compte du delegué ainsi que le nombre d'emballage en sa possession.
+pour La table + vue des mandat, vous avez un exemple dans le fichier gestion 2016 pour la partie MANDAT.
+Sur la fiche partenaire, avec un bouton intelligent, on doit pouvoir savoir le niveau du compte du delegué ainsi que le nombre d'emballage en sa possession.
+pour La table + vue des mandat, vous avez un exemple dans le fichier gestion 2016 pour la partie MANDAT.
+
+
+Creer une table + vue suivi de pesage qui equivaut à des fiches d'entrée d'articles et d'emballage en stock
+explication: les cooperatives achetent des produits avec les delegués et planteurs.
+la valeur des produits livrées (article) est defini en fonction du prix d'achat unitaires par la quantité d'unité de mesure et
+cette valeur est enregistré au credit du compte partenaire lié au partenaire (delegué ou planteurs). la table recupere aussi 
+la quantité d'emballage utilisé qui dans le cas d'un delegué viendra diminuer la quantité d'emballage qui lui avait ete remis.
+un taux de commission par defaut peut etre affecté à un delegué (dans sa fiche partenaire). Il permettra de determiner la valeur
+de sa commission du le prix de vente. Cette valeur viendra en augmentation du credit de son compte.
+L'ensemble des ces infos sont enregistré dans le document FICHE DE SUIVI PESAGE.
+TO DO: 
+
+Gestion des emprunts planteurs
+
+Gestion et planification des chargements de produits.
+
+
+
+Taches To DO
+Richmond: fiche partenaire
+Elias: suivi du pesage et du mandat delegué		
